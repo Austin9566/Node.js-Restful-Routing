@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  # 定義 nodejs-restful-routing 服務
+  nodejs-restful-routing:
+    image: node:slim
+    ports:
+      - 3000:3000
+    volumes:
+      - ./nodejs-restful-routing-example:/home
+    command: "node /home/app.js"
+
+  # 定義 mongodb 服務
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodb-data:/data/db

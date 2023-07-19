@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>新增學生資料的頁面</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>新增學生資料</h1>
+    <form action="/students" method="POST">
+      <label for="name">學生姓名：</label>
+      <input type="text" name="name" id="name" />
+      <br />
+      <label for="age">學生年齡：</label>
+      <input type="text" name="age" id="age" />
+      <br />
+      <label for="major">主修：</label>
+      <input type="text" name="major" id="major" />
+      <br />
+      <label for="merit">校內獎學金：</label>
+      <input type="text" name="merit" id="merit" />
+      <br />
+      <label for="other">校外獎學金：</label>
+      <input type="text" name="other" id="other" />
+      <br />
+      <button>新增學生資料</button>
+    </form>
+    <a href="/students">回到學生首頁</a>
+  </body>
+</html>

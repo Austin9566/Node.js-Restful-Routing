@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>編輯<%=searchStudentData.name%>學生資料的頁面</title>
+  </head>
+  <body>
+    <h1>編輯<%=searchStudentData.name%>學生資料</h1>
+    <form
+      action="/students/<%= searchStudentData._id %>?_method=PUT"
+      method="POST"
+    >
+      <label for="name">學生姓名：</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        value="<%=searchStudentData.name%>"
+      />
+      <br />
+      <label for="age">學生年齡：</label>
+      <input
+        type="text"
+        name="age"
+        id="age"
+        value="<%=searchStudentData.age%>"
+      />
+      <br />
+      <label for="major">主修：</label>
+      <input
+        type="text"
+        name="major"
+        id="major"
+        value="<%=searchStudentData.major%>"
+      />
+      <br />
+      <label for="merit">校內獎學金：</label>
+      <input
+        type="text"
+        name="merit"
+        id="merit"
+        value="<%=searchStudentData.scholarship.merit%>"
+      />
+      <br />
+      <label for="other">校外獎學金：</label>
+      <input
+        type="text"
+        name="other"
+        id="other"
+        value="<%=searchStudentData.scholarship.other%>"
+      />
+      <br />
+      <button>更新學生資料</button>
+    </form>
+    <a href="/students">回到學生首頁</a>
+  </body>
+</html>
