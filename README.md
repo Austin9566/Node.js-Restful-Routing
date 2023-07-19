@@ -20,25 +20,3 @@ docker-compose up -d
   * 查詢所有學生資料：http://localhost:3000/students
   * 查詢特定學生資料：http://localhost:3000/students/_id
     * _id：這是學生的 _id，可以先查詢所有學生資料的 _id，接著在 _id 那邊修改一下就可以看到特定學生資料。
-* **POST**
-  * 新增一位學生資料：http://localhost:3000/students
-    * 需要的 Key 和 value 請參考是下圖。
-
-      | Key   | Value |
-      |-------|-------|
-      | name  | Kevin |
-      | age   | 25    |
-      | major | CS    |
-      | merit | 1000  |
-      | other | 500   |
-
-      請使用上述的 Key 和 Value 來發送 POST 請求以新增一位學生資料。
-* **Put**
-  * 修改一位學生資料：http://localhost:3000/students/_id
-    * 需要的 Key 和 Value 和上方的 Post 一樣，有些 Key 值沒有的話，系統會將其資料修改為預設值。
-
-* **Patch**
-  * 修改一位學生特定資料：http://localhost:3000/students/_id
-    * 需要的 Key 和 Value 和上方的 Post 一樣，有些 Key 值沒有的話，系統不會將其資料修改為預設值。
-* **Dalete**
-  * 刪除一位學生特定資料：http://localhost:3000/students/_id
